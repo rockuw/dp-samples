@@ -1,0 +1,17 @@
+The Abstract Factory Pattern
+
+DESCRIPTION
+
+There are two kinds of products: Product1 and Product2. CN and US make them differently.
+Defines two seperate factories located in CN and US respectively.
+The Client chooses different factories to make different products.
+
+BUILD & RUN
+
+	g++ Client.cpp
+	./a.out
+
+PROBLEMS
+
+Who should be responsible for deleting the product?
+	In this case it's the client. This makes the client code a little messy.
