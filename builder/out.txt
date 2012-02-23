@@ -1,0 +1,6 @@
+HELLO WORLD
+
+
+Unlike traditional c-strings, which are mere sequences of characters in a memory array, C++ string objects belong to a class with many built-in features to operate with strings in a more intuitive way and with some additional useful features common to C++ containers.
+
+Except for the copy constructor, an optional final parameter exists for all basic_string constructors, whose type is its Allocator template argument. This parameter influences the memory allocation model to be used for the object. To provide a better readability, and because under no known compiler implementation the memory allocation model for strings (allocator<char>) is affected by its value, it has not been included in the declarations above, but see the basic template member declaration ahead for a more complete declaration.

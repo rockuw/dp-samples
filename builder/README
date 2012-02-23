@@ -1,0 +1,19 @@
+The Builder Pattern
+
+DESCRIPTION
+
+We wish to create a passage in two formats: normal txt and html.
+The passage contains a title and some paragraphs of text.
+The Director is in charge of the build process, including setting the 
+passage title, begining a new paragraph and appending text to it.
+The TextBuilder is the interface of passage builder and the two 
+concrete classes NormalTextBuilder and HtmlTextBuilder create the passage
+in their own way.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
