@@ -6,32 +6,32 @@
 
 class CNFactory: public AbstractFactory
 {
-	public:
-		CNFactory(){}
-		~CNFactory(){}
+    public:
+        CNFactory(){}
+        ~CNFactory(){}
 
-		AbstractProduct1 *createProduct1(){
-			return new CNProduct1();
-		}
+        AbstractProduct1 *createProduct1(){
+            return new CNProduct1();
+        }
 
-		AbstractProduct2 *createProduct2(){
-			return new CNProduct2();
-		}
+        AbstractProduct2 *createProduct2(){
+            return new CNProduct2();
+        }
 };
 
 class USFactory: public AbstractFactory
 {
-	public:
-		USFactory(){}
-		~USFactory(){}
+    public:
+        USFactory(){}
+        ~USFactory(){}
 
-		AbstractProduct1 *createProduct1(){
-			return new USProduct1();
-		}
+        AbstractProduct1 *createProduct1(){
+            return new USProduct1();
+        }
 
-		AbstractProduct2 *createProduct2(){
-			return new USProduct2();
-		}
+        AbstractProduct2 *createProduct2(){
+            return new USProduct2();
+        }
 };
 
 #endif

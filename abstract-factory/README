@@ -8,10 +8,10 @@ The Client chooses different factories to make different products.
 
 BUILD & RUN
 
-	g++ Client.cpp
-	./a.out
+    g++ Client.cpp
+    ./a.out
 
 PROBLEMS
 
 Who should be responsible for deleting the product?
-	In this case it's the client. This makes the client code a little messy.
+    In this case it's the client. This makes the client code a little messy.

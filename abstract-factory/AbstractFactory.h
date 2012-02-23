@@ -5,12 +5,12 @@
 
 class AbstractFactory
 {
-	public:
-		AbstractFactory(){}
-		virtual ~AbstractFactory(){}
+    public:
+        AbstractFactory(){}
+        virtual ~AbstractFactory(){}
 
-		virtual AbstractProduct1 *createProduct1() = 0;
-		virtual AbstractProduct2 *createProduct2() = 0;
+        virtual AbstractProduct1 *createProduct1() = 0;
+        virtual AbstractProduct2 *createProduct2() = 0;
 };
 
 #endif
