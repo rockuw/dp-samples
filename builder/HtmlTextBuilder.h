@@ -10,16 +10,16 @@ class HtmlTextBuilder: public TextBuilder
         ~HtmlTextBuilder(){}
 
         void addParagraph(void){
-            TextBuilder::addText("<p>");
+            TextBuilder::addText("\n<p>\n");
         }
 
-        string getText(){
+        std::string getText(){
             setHeaderFooter();
             return _header + "\n" + _text + "\n" + _footer;
         }
 
     private:
-        string _header, _footer;
+        std::string _header, _footer;
         void setHeaderFooter(){
             _header = "<html><head><title>"
                 + _title + "</title></head>"

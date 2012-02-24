@@ -9,7 +9,7 @@ class CNProduct1: public AbstractProduct1
         CNProduct1(){}
         ~CNProduct1(){}
 
-        string getDescription(){
+        std::string getDescription(){
             return AbstractProduct1::getDescription() + " from CN";
         }
 };
@@ -20,7 +20,7 @@ class USProduct1: public AbstractProduct1
         USProduct1(){}
         ~USProduct1(){}
 
-        string getDescription(){
+        std::string getDescription(){
             return AbstractProduct1::getDescription() + " from US";
         }
 };
@@ -31,7 +31,7 @@ class CNProduct2: public AbstractProduct2
         CNProduct2(){}
         ~CNProduct2(){}
 
-        string getDescription(){
+        std::string getDescription(){
             return AbstractProduct2::getDescription() + " from CN";
         }
 };
@@ -42,7 +42,7 @@ class USProduct2: public AbstractProduct2
         USProduct2(){}
         ~USProduct2(){}
 
-        string getDescription(){
+        std::string getDescription(){
             return AbstractProduct2::getDescription() + " from US";
         }
 };

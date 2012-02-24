@@ -3,31 +3,29 @@
 
 #include <string>
 
-using namespace std;
-
 class TextBuilder
 {
     public:
         TextBuilder():_title("No Title"), _text(""){}
         virtual ~TextBuilder(){}
 
-        virtual void setTitle(const string& title){ 
+        virtual void setTitle(const std::string& title){ 
             _title = title;
         }
 
         virtual void addParagraph(void){}
 
-        virtual void addText(const string& text){
+        virtual void addText(const std::string& text){
             _text += text;
         }
 
-        virtual string getText(){
+        virtual std::string getText(){
             return _title + "\n" + _text;
         }
 
     protected:
-        string _title;
-        string _text;
+        std::string _title;
+        std::string _text;
 };
 
 #endif

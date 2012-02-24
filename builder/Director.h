@@ -4,8 +4,6 @@
 #include <string>
 #include "TextBuilder.h"
 
-using namespace std;
-
 class Director
 {
     public:
@@ -14,11 +12,11 @@ class Director
             delete _builder;
         }
         
-        string getResult(){
+        std::string getResult(){
             return _builder->getText();
         }
 
-        void setTitle(const string& title){
+        void setTitle(const std::string& title){
             _builder->setTitle(title);
         }
 
@@ -26,7 +24,7 @@ class Director
             _builder->addParagraph();
         }
 
-        void appendText(const string& text){
+        void appendText(const std::string& text){
             _builder->addText(text);
         }
 

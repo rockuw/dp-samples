@@ -1,0 +1,16 @@
+The Factory Method Pattern
+
+DESCRIPTION
+
+The Application class deals with creating a product and doing some operation on it.
+But it depends on its subclass to determine which product it manipulates.
+CNApp and USApp create their own product respectively.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+It's a specific version of Template Method pattern.

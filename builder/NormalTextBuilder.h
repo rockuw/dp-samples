@@ -10,10 +10,10 @@ class NormalTextBuilder: public TextBuilder
         NormalTextBuilder(){}
         ~NormalTextBuilder(){}
 
-        void setTitle(const string& title){
+        void setTitle(const std::string& title){
             _title = title;
             for(int i = _title.length() - 1; i >= 0; i --){
-                _title[i] = toupper(_title[i]);
+                _title[i] = std::toupper(_title[i]);
             }
         }
 

@@ -17,3 +17,6 @@ BUILD & RUN
 
 PROBLEMS
 
+Does it count as a Strategy? The book doesn't say it. But Builder looks
+like Strategy except that Builder build something while Strategy handles
+something.
