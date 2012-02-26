@@ -1,0 +1,20 @@
+The Singleton Pattern
+
+DESCRIPTION
+
+Application often stores some configuration and want it to be accessed from anywhere 
+in the application. Singleton may be a good choice for this situation, if the config  
+file is not the option.
+Config implementes the setconfig and getconfig function using a map. The private 
+constructor ensures there is only one instance of Config in the application.
+Singleton.h and Singleton.cpp demonstrates the use of a singleton registry and the 
+subclassing of singleton.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+Using environment variables to determine which singleton to instantiate is pretty cool!

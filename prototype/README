@@ -1,0 +1,22 @@
+The Prototype Pattern
+
+DESCRIPTION
+
+The Application class can create different objects based on the prototype it has.
+The products implement a clone() operation to allow creating itself without 
+referencing its constructor.
+CNApp and USApp are parameterized with different prototype and can create different
+objects.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The biggest benefit prototype brings is that it uses clone() to create a new object, 
+rather than through the constructor. This allows creating a new object without referencing 
+its constructor, thus makes dynamic loading of class possible.
+Note prototype is NOT about making objects from 0 to 1, it's about creating objects from 1 
+to many. The '1' is always created by runtime.
