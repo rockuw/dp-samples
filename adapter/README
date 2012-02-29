@@ -1,0 +1,25 @@
+The Adapter Pattern
+
+DESCRIPTION
+
+There are two toys: a CNToy and a USToy. The Client can only play toys made in CN (by 
+clicking the button "ShuoHua"). A USToy must be adapted before the client can play it. 
+So we made an adapter which wraps the USToy making it a CNToy from the point of our 
+Client.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+if we write in the base class as follows:
+    virtual void func() const {
+        ...
+    }
+then we MUST NOT forget the "const" in the derived class:
+    void func() const{
+        ...
+    }
+otherwise the polyphorsim magic will not happen.

@@ -12,7 +12,7 @@ subclassing of singleton.
 
 BUILD & RUN
 
-    g++ Client.cpp
+    g++ Client.cpp Config.cpp Singleton.cpp
     ./a.out
 
 PROBLEMS
