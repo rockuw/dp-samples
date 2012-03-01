@@ -1,0 +1,25 @@
+The Bridge Pattern
+
+DESCRIPTION
+
+There are two types of Windows: IconWindow and DialogWindow, and two platforms: XWindow 
+and MacWindow. We create two class hierachies to allow them extending indepently 
+and a bridge to connect them. See the PROBLEMS section.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The simple abstract base class and concrete derived class method only extends the 
+class in one dimension. We create subclasses XWindow and MacWindow to support the 
+specific platform respectively. This works fine when we want to support Window on 
+a new platform say MSWindow. But it encounters problem when we want to extend Window 
+in a different dimension: IconWindow, DialogWindow, and so on. We can inherit Window 
+to create the corresponding subclasses. But apparently IconWindow and XWindos are 
+not of the same layer(or dimension). So what we need is two seperate hierachies: one 
+for IconWindow and DialogWindow and the like, while the other for XWindow, MacWindow 
+and the like. The BRIDGE is used to connect the two hierachies. In our example, it's 
+connected by a abstraction-implementor relationship.
