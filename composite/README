@@ -1,0 +1,37 @@
+The Composite Pattern
+
+DESCRIPTION
+
+All UI elements are Widgets. Some of them are single widget, while others may 
+contain other widgets. 
+Button and TextBox are single widgets, and GroupBox is a composite widget which 
+may contain other widgets.
+All widgets support a draw() operation which the client can use to show them.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The Composite pattern is not clean, since there are some dilemmas:
+1. The basic interface: wide or narrow?
+   The wider the interface is, the more transparency the client gets. However, 
+   there may be problems in handling the extra operations for the leaf nodes 
+   if we design an interface including the leaf and composite. For example, the 
+   Add(T *child) operation, if we don't let the leaf delete the child, then it 
+   may become dangling; if we do, the client may complain about it.
+   In the sample, we define a narrow interface and sacrifice some transparency. 
+   But it's acceptable that the client is aware of whether a widget is a group 
+   widget.
+
+2. Who is responsible for delete the children?
+   Maybe it should be the composite. But if we have the code:
+       Button *button = new Button();
+       TextBox *textbox = new TextBox();
+       GroupBox *group = new GroupBox();
+       group->addChild(textbox);
+
+   Of the three objects: button, textbox, and group, how would the client know 
+   which to delete and which not?

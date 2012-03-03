@@ -1,0 +1,17 @@
+The Builder Pattern
+
+DESCRIPTION
+
+There are two drinks: coffee and tea, and two additives: sugar and ice.
+One may order a glass of coffee and have some addtives. We view the additives 
+as decorators of the drink.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+What's the purpose of the abstract Decorator class?
+Does it merely provide it for ensuring design consistency?
