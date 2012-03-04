@@ -1,0 +1,26 @@
+The Flyweight Pattern
+
+DESCRIPTION
+
+This sample code creates an extremely simple word processor. A document contains 
+thousands of characters, which will be of different fonts and sizes. Representing 
+each character with an object will be costly. The character object can be shared 
+if we discard the fonts and sizes that imposed on them. So we create a context 
+to store the font status of the document. Precisely storing this information will 
+require the use of B-Tree, which is not easy to implement. So we simulate this storage 
+by manually assign the sizes: 0-1 is 10, 1-3 is 12...
+
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The key to using Flyweight is to seperate the extrinsic state and intrinsic 
+state of objects. The intrinsic state is stored in the flyweight itself, and 
+the extrinsic state is stored in the context. It's important that the quantity 
+of extrinsic states is less than the objects needed. Or the seperation of 
+extrinsic and intrinsic will be meaningless. It's also a difficulty to choose 
+the right data structure to stored the extrinsic states.

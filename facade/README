@@ -1,0 +1,16 @@
+The Facade Pattern
+
+DESCRIPTION
+
+The string processor involves upcasing the string, and then revert it. The Upcaser 
+and Revertor handles upcasing and reverting respectively. The Facade provides the 
+client a simple interface to process string.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The pattern is really a chicken rib... But we provide it here for integrity.
