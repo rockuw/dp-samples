@@ -1,22 +1,27 @@
-#ifndef WORD_PROCESSOR_H
-#define WORD_PROCESSOR_H
+#ifndef DOCUMENT_H
+#define DOCUMENT_H
 
 #include <list>
 #include "GlyphFactory.h"
 #include "Context.h"
 
-class WordProcessor
+class Document
 {
     public:
-        WordProcessor(){}
-        ~WordProcessor(){}
+        Document(){}
+        ~Document(){}
 
         void addChar(char c){
             _chars.push_back(_factory.createChar(c));
             _context.insert();
         }
 
-        void showChar(void){
+        void addGlyph(Glyph *glyph){
+            _chars.push_back(glyph);
+            _context.insert();
+        }
+
+        void show(void){
             for(std::list<Glyph *>::iterator it = _chars.begin(); it != _chars.end(); it ++){
                 (*it)->draw(&_context);
             }

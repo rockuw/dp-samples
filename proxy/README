@@ -1,0 +1,24 @@
+The Proxy Pattern
+
+DESCRIPTION
+
+A document may contain some heavy objects to show. If we load these objects when inserting 
+them to the document, we will get a slow application. The solution is to insert a 
+placeholder that act as a real ojbect and load the realy object when needed. 
+The WordProcessor manages the elements(Glyphs) that are added to it, and show it when 
+we call it. When we want to add an Image object to the document, instead of instantiating 
+an Image object, which may be costly, we insert an ImageProxy which is lightweight to 
+instantiate and let the proxy to instantiate an Image object when needed.
+
+BUILD & RUN
+
+    g++ Client.cpp Config.cpp Singleton.cpp
+    ./a.out
+
+PROBLEMS
+
+Why don't we let the Image class implement the function of loading image when needed?
+I think the answer is that Image class itself should focus on the processing of image. 
+It should not depend on how we will use it. This focus can improve reusability.
+
+There are there proxies: the remote proxy, the virtual proxy, and the protection proxy.

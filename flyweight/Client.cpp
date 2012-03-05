@@ -1,23 +1,23 @@
-#include "WordProcessor.h"
+#include "Document.h"
 #include <list>
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    WordProcessor word;
+    Document doc;
 
-    word.addChar('H');
-    word.addChar('E');
-    word.addChar('L');
-    word.addChar('L');
-    word.addChar('O');
-    word.addChar('W');
-    word.addChar('O');
-    word.addChar('R');
-    word.addChar('L');
-    word.addChar('D');
+    doc.addChar('H');
+    doc.addChar('E');
+    doc.addChar('L');
+    doc.addChar('L');
+    doc.addChar('O');
+    doc.addChar('W');
+    doc.addChar('O');
+    doc.addChar('R');
+    doc.addChar('L');
+    doc.addChar('D');
 
-    word.showChar();
+    doc.show();
     return 0;
 }
