@@ -1,0 +1,24 @@
+The Chain of Responsibility Pattern
+
+DESCRIPTION
+
+In an GUI application, some UI controls may contain help information to remind the user 
+of the corresponding function of the control. The same control may have different 
+hints in different context. If no specific help information is available, the application 
+should display a more general information. To get the help information, we follow a 
+chain of controls until some help is available.
+The HelpHandler defines the interface for providing help information, when there is 
+no help information in the current control, it forwards the request to the successor 
+and let it handle the show help request.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The object on the chain may accept the request as long as it has some information, as 
+in this sample. Or it can decide based on some condition of the request. In this case, 
+we can have the object pass the request as an object on to the its successor. The objects 
+determines whether or not to accept the request by inspecting the request object.
