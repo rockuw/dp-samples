@@ -1,0 +1,23 @@
+The Command Pattern
+
+DESCRIPTION
+
+Suppose we are manipulating an Data object through a GUI, there are buttons on the menu bar that let 
+user click and perform corresponding function on the Data object. How do we connect the click of 
+an button with the operation performed on the Data object? We could provide a callback function like 
+button_clicked() in which we can write code to manipulate the Data object. We can also represent 
+the operation with a Command object, which knows how to manipulate the Data object. When user clicks 
+the button, we UNIFORMLY invoke the execute() function of Command. Different commands could be 
+created by subclassing. We can also maintain a list of history commands and support undo.
+The AddCommand and SubCommand add or sub the value in Data object respectively. The Invoker maintains 
+the command history.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+We don't pass any parameters to the command, this may be a limit when we want more precise operations 
+performed on the target.
