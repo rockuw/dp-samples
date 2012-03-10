@@ -1,0 +1,22 @@
+The Interpreter Pattern
+
+DESCRIPTION
+
+Given a regular expression and a string, we determine whether the string matches the 
+RE or not by INTERPRETING it. First, we manually build a syntax tree by assembling 
+Expression objects in the client code. Then we let the interpreter do the matching. 
+A literal expression matches a literal; An alternate expression matches an alternative 
+expression; and so on. 
+Note that building the syntax tree is essential for the interpreting process. 
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+It's a bit difficult to understand the difference between parsing and interpreting. 
+The syntax tree is built in the parsing process, while the interpreting process is 
+simply some operation on the syntax tree.
+The client code is not clean because it has too much deleting in code.
