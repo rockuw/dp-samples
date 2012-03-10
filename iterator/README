@@ -1,0 +1,23 @@
+The Iterator Pattern
+
+DESCRIPTION
+
+List stores some Items as a list logically. It only provides a low-level way to access 
+items in it, and takes the responsibility for traversal into an iterator object. Through 
+subclassing we can also define different iterators for the list.
+In this sample code, the iterator is an external iterator; the iterator defines the traversal 
+algorithm;
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+1. the iterator accesses the list through a public interface, which may limit the ability 
+of the iterator to traverse the list in more precise ways.
+2. the iterator is not robust. That is if we insert elements into the list while we are 
+traversing the list, something will be wrong.
+3. we must take care of the deletion of the iterator.
+4. maybe we should refrence the STL way of iterators.

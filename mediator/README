@@ -1,0 +1,25 @@
+The Mediator Pattern
+
+DESCRIPTION
+
+When a set of objects interact with eath other, the objects are dependent on others, making 
+it difficult change the system's behaviors. If we add a Mediator between them, make the 
+objects communicating only with the mediator, then we can encapsulate the change in one 
+place and achieve flexibility.
+There is a dialog which conatains a Button, a ListBox and a TextBox. When the button is 
+clicked, we need to get the listbox's selection and fill it into the textbox. 
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The Mediator is really useful in GUI applications, in which a set of UI elements interact 
+or have constraints with each other. 
+There are two C++ issues:
+1. we can declare a pure virtual destructor, but we must also define it.
+2. when using forward declaration, we cannot invoke the methods. 
+
+see: http://www.cplusplus.com/forum/articles/10627/
