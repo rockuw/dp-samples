@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     list2.append(5);
     Iterator<int> *it2 = list2.createIterator();
     for(it2->first(); !it2->isDone(); it2->next()){
-        cout << *(it->current()) << endl;
+        cout << *(it2->current()) << endl;
     }
 
     delete it2;
