@@ -1,0 +1,19 @@
+The Memento Pattern
+
+DESCRIPTION
+
+ConstraintSolver displays some Graphics. It manages the position of Graphics and shows them 
+on request from the client. The user can move the Graphic as he wants.
+Before the user moves the graphics, he may want to backup them so that he can restore the 
+situation if he made some wrong moves. He does this by request a memento from the ConstraintSolver and keeps it. When he wants to restore, he hands the memento to the ConstraintSolver and 
+everything will be back.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+This sample code is possibly the most complex of all.
+I don't quite understand how to achieve incremental memento.

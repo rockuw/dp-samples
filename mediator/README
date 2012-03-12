@@ -11,7 +11,7 @@ clicked, we need to get the listbox's selection and fill it into the textbox.
 
 BUILD & RUN
 
-    g++ Client.cpp
+    g++ Client.cpp Widget.cpp
     ./a.out
 
 PROBLEMS
