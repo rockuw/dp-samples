@@ -1,0 +1,26 @@
+The Observer Pattern
+
+DESCRIPTION
+
+The Timer is a subject that has some information for other readers to subscribe. When 
+the time changes, it will notice its subscribers about the change. In this way, the 
+subscribers are kept informed of the information. In this sample code, there two 
+subscribers: a ColonClock that displays time with ":", and a DashClock that displays 
+time with "-".
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The Subject interface implements the notify() mechanism, and the Observer act as the 
+common type that can be notified. Concrete subjects provide addtional interface to 
+access its information. Concrete observers implement the way they update themselves.
+
+The observer may observing more than one subject. So the update() checks the source.
+The client or the subject itself triggers the notify()?
+Push or pull?
+Specifying changed parts explicitly.
+Using mediator to encapsulate complex update semantics. (DAG)
