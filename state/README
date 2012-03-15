@@ -1,0 +1,23 @@
+The State Pattern
+
+DESCRIPTION
+
+A TCPConnection may have an open state or a close state. Based on its current state, 
+the connection behaves differently. When the connection is open, the close() operation 
+closes the connection, while close() does nothing when the connection is closed() 
+already. The state-specific behavior also changes the current of the connection. 
+For example, the open() operation of the TCPClosed state changes the connection's state 
+to TCPOpen.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+1. When we have many states and complex transitions, we may use a table to map the 
+inputs to the transition state.
+2. This pattern reminds me of the Tool Palette in Photoshop. The current tool acting 
+as the state.
+3. The code is a little messy, due to the integration of .h and .cpp.
