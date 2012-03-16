@@ -1,0 +1,25 @@
+The Strategy Pattern
+
+DESCRIPTION
+
+This sample simulates the process of composing a text document. Windows and Unix 
+have different linebreak representations. It's LF('\n') on Unix while it's CR('\r') 
++ LF('\n') on Windows. We configurate the Editor with a LineBreak object and use 
+it to generate the corresponding representation.
+
+BUILD & RUN
+
+    g++ Client.cpp Editor.cpp UnixLineBreak.cpp WinLineBreak.cpp
+    ./a.out
+
+PROBLEMS
+
+This is the first design pattern that impresses me. It was when I read the book 
+Head First Design Patterns. It illustrates the pattern with a Duck example. Some 
+ducks can quack while others cannot. In the book, he uses a QuackBehavior as a 
+strategy of the duck. But I think it's more appropriate to subclass duck to 
+implement different quack behaviours. 
+Of course my sample does not make much sense. But I treat it as a sample just to 
+let me write some code.
+In this sample code, I use the new coding style that seperates the header and 
+the source.

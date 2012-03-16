@@ -1,0 +1,17 @@
+The Template Method Pattern
+
+DESCRIPTION
+
+The View class defines a template to show contents. It defines the fixed steps 
+to display the view and implement the invariant parts. HtmlView subclass provide 
+a doDisplay() operation and let the parent call it. In this way, the subclass
+provide a hook for the parent to invoke.
+
+BUILD & RUN
+
+    g++ Client.cpp View.cpp HtmlView.cpp
+    ./a.out
+
+PROBLEMS
+
+The Template Method pattern is import in refactoring. 
