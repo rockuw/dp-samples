@@ -1,0 +1,25 @@
+The Visitor Pattern
+
+DESCRIPTION
+
+The Chassis is a composite of equipments. By adding equipments to other equipments 
+we build a equipments tree. We want to collect information of the nodes in the 
+tree. An alternative is to use the Composite Pattern and let the composite do 
+the collecting. Here we use visitors to do the job. 
+The PriceVisitor traverses the tree and calculates the total price of all the 
+nodes, while the PowerVisitor sums up the power.
+The visitor have interface to visit all the concrete equipments. And all the 
+concrete equipments inherit the interface to accept a visitor from the Equipment 
+parent.
+
+BUILD & RUN
+
+    g++ Client.cpp
+    ./a.out
+
+PROBLEMS
+
+The double-dispatch is really cool.
+The Visitor Pattern contains an object structure and some visitors. We can add 
+new operations on the nodes in the object structure, but it's difficult to 
+add new type of nodes.
