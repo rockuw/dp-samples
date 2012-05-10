@@ -21,6 +21,6 @@ PROBLEMS
 The key to using Flyweight is to seperate the extrinsic state and intrinsic 
 state of objects. The intrinsic state is stored in the flyweight itself, and 
 the extrinsic state is stored in the context. It's important that the quantity 
-of extrinsic states is less than the objects needed. Or the seperation of 
+of extrinsic states is less than the number of objects needed. Or the seperation of 
 extrinsic and intrinsic will be meaningless. It's also a difficulty to choose 
 the right data structure to stored the extrinsic states.
