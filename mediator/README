@@ -2,7 +2,7 @@ The Mediator Pattern
 
 DESCRIPTION
 
-When a set of objects interact with eath other, the objects are dependent on others, making 
+When a set of objects interact with eath other, the objects are tightly coupled, making 
 it difficult change the system's behaviors. If we add a Mediator between them, make the 
 objects communicating only with the mediator, then we can encapsulate the change in one 
 place and achieve flexibility.

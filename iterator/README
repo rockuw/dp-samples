@@ -5,8 +5,11 @@ DESCRIPTION
 List stores some Items as a list logically. It only provides a low-level way to access 
 items in it, and takes the responsibility for traversal into an iterator object. Through 
 subclassing we can also define different iterators for the list.
-In this sample code, the iterator is an external iterator; the iterator defines the traversal 
-algorithm;
+In this sample code, the iterator is an external iterator; the client controls the iteration.
+An example of internal iterator is (in ruby):
+    1.upto(10) do |i|
+      puts i
+    end
 
 BUILD & RUN
 
